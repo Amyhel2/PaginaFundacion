@@ -1,0 +1,107 @@
+ <!-- Page Header Start -->
+ <div class="container-fluid page-header mb-5 position-relative ">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Educación y Capacitación</h1>
+            <div class="d-inline-flex mb-lg-5">
+                <p class="m-0 text-white"><a class="text-white" href="index.html">Inicio</a></p>
+                <p class="m-0 text-white px-2">/</p>
+                <p class="m-0 text-white">Programas</p>
+                <p class="m-0 text-white px-2">/</p>
+                <p class="m-0 text-white">Educacion y Capacitación</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Education Content Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Educación</h4>
+                <h1 class="display-4">Educación y Capacitación</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="blog-item">
+                        <img class="img-fluid" src="img/education-1.jpg" alt="">
+                        <div class="blog-content">
+                            <h4 class="text-primary">Recursos Educativos</h4>
+                            <p>Material de apoyo.</p>
+                            <a href="education-detail.html" class="btn btn-primary mt-3">Leer Más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-item">
+                        <img class="img-fluid" src="img/education-2.jpg" alt="">
+                        <div class="blog-content">
+                            <h4 class="text-primary">Programación</h4>
+                            <p>Capacitación en habilidades tecnológicas y de programación.</p>
+                            <a href="education-detail.html" class="btn btn-primary mt-3">Leer Más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-item">
+                        <img class="img-fluid" src="img/education-3.jpg" alt="">
+                        <div class="blog-content">
+                            <h4 class="text-primary">Concursos</h4>
+                            <p>Desarrollo de habilidades sociales.</p>
+                            <a href="education-detail.html" class="btn btn-primary mt-3">Leer Más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Education Content End -->
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Nuestro Equipo</h4>
+                <h1 class="display-4">Conoce a Nuestro Equipo</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <div class="team-item position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                        <div class="team-text bg-secondary text-center p-4">
+                            <h5 class="text-white">John Doe</h5>
+                            <p class="text-white text-uppercase">Director Ejecutivo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <div class="team-item position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                        <div class="team-text bg-secondary text-center p-4">
+                            <h5 class="text-white">Jane Smith</h5>
+                            <p class="text-white text-uppercase">Directora de Programas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <div class="team-item position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                        <div class="team-text bg-secondary text-center p-4">
+                            <h5 class="text-white">Mike Johnson</h5>
+                            <p class="text-white text-uppercase">Gerente de Operaciones</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <div class="team-item position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                        <div class="team-text bg-secondary text-center p-4">
+                            <h5 class="text-white">Sarah Williams</h5>
+                            <p class="text-white text-uppercase">Coordinadora de Voluntarios</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
