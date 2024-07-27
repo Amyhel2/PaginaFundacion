@@ -33,6 +33,7 @@
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
             <div id="logo">
                 <h1><a class="" href="<?php echo base_url() ?>index.php/estudiante/principal">Promesa<span>Fundación 705 </span></a></h1>
+                <a href="<?php echo base_url() ?>index.php/estudiante/news" class="nav-item nav-link">iniciar secion</a>
             </div>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>

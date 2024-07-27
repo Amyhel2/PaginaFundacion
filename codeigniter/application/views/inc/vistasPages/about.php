@@ -3,7 +3,7 @@
         <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
             <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Acerca de</h1>
             <div class="d-inline-flex mb-lg-5">
-                <p class="m-0 text-white"><a class="text-white" href="index.html">Inicio</a></p>
+                <p class="m-0 text-white"><a class="text-white" href="<?php echo base_url() ?>index.php/estudiante/principal">Inicio</a></p>
                 <p class="m-0 text-white px-2">/</p>
                 <p class="m-0 text-white">Acerca de</p>
             </div>
@@ -16,8 +16,7 @@
     <div class="row justify-content-center">
         <div class="col-lg-7">
             <div class="section-title text-center position-relative mb-4">
-                <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Acerca de Nosotros</h6>
-                <h1 class="display-4">Conoce nuestra misión y visión</h1>
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Conoce nuestra misión y visión</h4>
             </div>
             <p class="text-center">En Proyecto Promesa, estamos comprometidos a crear un entorno donde los niños puedan prosperar. A través de nuestros diversos programas, buscamos brindar oportunidades que les permitan desarrollarse plenamente y alcanzar su máximo potencial.</p>
         </div>
@@ -57,8 +56,7 @@
     <div class="row justify-content-center">
         <div class="col-lg-7">
             <div class="section-title text-center position-relative mb-4">
-                <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Nuestro Equipo</h6>
-                <h1 class="display-4">Conoce a nuestro equipo dedicado</h1>
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Conoce a nuestro equipo dedicado</h4>
             </div>
         </div>
     </div>

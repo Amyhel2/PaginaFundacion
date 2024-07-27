@@ -3,7 +3,7 @@
         <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
             <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Actividades Deportivas</h1>
             <div class="d-inline-flex mb-lg-5">
-                <p class="m-0 text-white"><a class="text-white" href="index.html">Inicio</a></p>
+                <p class="m-0 text-white"><a class="text-white" href="<?php echo base_url() ?>index.php/estudiante/principal">Inicio</a></p>
                 <p class="m-0 text-white px-2">/</p>
                 <p class="m-0 text-white">Programas</p>
                 <p class="m-0 text-white px-2">/</p>
@@ -18,8 +18,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="section-title text-center position-relative mb-4">
-                    <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Nuestras Actividades</h6>
-                    <h1 class="display-4">Programas Deportivos</h1>
+                    <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Programas Deportivos</h4>
                 </div>
             </div>
         </div>
@@ -93,57 +92,117 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Fecha</th>
-                            <th scope="col">Hora</th>
-                            <th scope="col">Deporte</th>
-                            <th scope="col">Equipo A</th>
-                            <th scope="col">Equipo B</th>
-                            <th scope="col">Lugar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>20/07/2024</td>
-                            <td>10:00 AM</td>
-                            <td>Fútbol</td>
-                            <td>Equipo Alpha</td>
-                            <td>Equipo Beta</td>
-                            <td>Cancha 1</td>
-                        </tr>
-                        <tr>
-                            <td>22/07/2024</td>
-                            <td>11:00 AM</td>
-                            <td>Baloncesto</td>
-                            <td>Equipo Gamma</td>
-                            <td>Equipo Delta</td>
-                            <td>Cancha 2</td>
-                        </tr>
-                        <tr>
-                            <td>24/07/2024</td>
-                            <td>9:00 AM</td>
-                            <td>Voleibol</td>
-                            <td>Equipo Epsilon</td>
-                            <td>Equipo Zeta</td>
-                            <td>Cancha 3</td>
-                        </tr>
-                        <tr>
-                            <td>24/07/2024</td>
-                            <td>13:00 PM</td>
-                            <td>Voleibol</td>
-                            <td>Equipo Epsilon</td>
-                            <td>Equipo Omega</td>
-                            <td>Cancha 3</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        <style>
+        .table-container {
+            max-width: 600px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .table-title {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .table th, .table td {
+            text-align: center;
+        }
+        .table thead th {
+            background-color: #f8f9fa;
+        }
+        .flag {
+            width: 20px;
+            height: auto;
+        }
+    </style>
+
+
+<div class="table-container">
+    <div class="table-title">
+        <h4>Tabla de medallería - Delegaciones</h4>
+    </div>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Delegaciones</th>
+                <th>🥇</th>
+                <th>🥈</th>
+                <th>🥉</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><img src="path_to_flag_colombia" alt="Colombia" class="flag"> Colombia</td>
+                <td>73</td>
+                <td>51</td>
+                <td>55</td>
+                <td>179</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><img src="path_to_flag_venezuela" alt="Venezuela" class="flag"> Venezuela</td>
+                <td>63</td>
+                <td>48</td>
+                <td>46</td>
+                <td>157</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><img src="path_to_flag_chile" alt="Chile" class="flag"> Chile</td>
+                <td>30</td>
+                <td>40</td>
+                <td>47</td>
+                <td>117</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><img src="path_to_flag_ecuador" alt="Ecuador" class="flag"> Ecuador</td>
+                <td>25</td>
+                <td>32</td>
+                <td>32</td>
+                <td>89</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><img src="path_to_flag_peru" alt="Perú" class="flag"> Perú</td>
+                <td>20</td>
+                <td>26</td>
+                <td>54</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><img src="path_to_flag_bolivia" alt="Bolivia" class="flag"> Bolivia</td>
+                <td>9</td>
+                <td>19</td>
+                <td>39</td>
+                <td>67</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><img src="path_to_flag_panama" alt="Panamá" class="flag"> Panamá</td>
+                <td>7</td>
+                <td>7</td>
+                <td>11</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Team ODEBO</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
     </div>
     <!-- Match Schedule End -->
 
@@ -161,3 +220,7 @@
         </div>
     </div>
     <!-- Call to Action End -->
+
+
+    <!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

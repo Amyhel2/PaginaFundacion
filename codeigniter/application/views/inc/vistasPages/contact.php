@@ -3,7 +3,7 @@
         <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
             <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Contáctenos</h1>
             <div class="d-inline-flex mb-lg-5">
-                <p class="m-0 text-white"><a class="text-white" href="index.html">Inicio</a></p>
+                <p class="m-0 text-white"><a class="text-white" href="<?php echo base_url() ?>index.php/estudiante/principal">Inicio</a></p>
                 <p class="m-0 text-white px-2">/</p>
                 <p class="m-0 text-white">Contáctenos</p>
             </div>
@@ -15,8 +15,7 @@
     <div class="container-fluid pt-5">
         <div class="container">
             <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Contáctanos</h4>
-                <h1 class="display-4">No dudes en contactarnos</h1>
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Contáctos</h4>
             </div>
             <div class="row px-3 pb-2">
                 <div class="col-sm-4 text-center mb-3">
