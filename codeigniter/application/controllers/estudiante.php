@@ -4,39 +4,85 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Estudiante extends CI_Controller
 {
 	
-
-	/*public function demo(){
-		
-		$lista = $this->estudiante_model->listaestudiantes();
-		$data['alumnos'] = $lista;
-		$this->load->view('inc/vistaslte/head');
-		$this->load->view('inc/vistaslte/menu');
-		$this->load->view('inc/vistaslte/test',$data);
-		$this->load->view('inc/vistaslte/footer');
-		
-		
-	}*/
-
-	public function curso()
+	public function principal()
 	{
-		$lista = $this->estudiante_model->listaestudiantes();
-		$data['alumnos'] = $lista;
-		$this->load->view('inc/head');
-		//$this->load->view('inc/vistaslte/menu');
-		$this->load->view('inc/vistasPages/test', $data);
-		//$this->load->view('lista', $data);
-		$this->load->view('inc/footer');
+		$this->load->view('vistasIniciales/headPages');
+		$this->load->view('vistasIniciales/principal');
+		$this->load->view('vistasIniciales/footer');
 		
 	}
 
-
 	
+
+	public function about()
+	{
+		$this->load->view('vistasIniciales/headPages');
+		$this->load->view('vistasIniciales/about');
+		$this->load->view('vistasIniciales/footer');
+		
+	}
+
+	public function contact()
+	{
+		$this->load->view('vistasIniciales/headPages');
+		$this->load->view('vistasIniciales/contact');
+		$this->load->view('vistasIniciales/footer');
+		
+	}
+
+	public function donations()
+	{
+		$this->load->view('vistasIniciales/headPages');
+		$this->load->view('vistasIniciales/donations');
+		$this->load->view('vistasIniciales/footer');
+		
+	}
+
+	public function education()
+	{
+		$this->load->view('vistasIniciales/headPages');
+		$this->load->view('vistasIniciales/education');
+		$this->load->view('vistasIniciales/footer');
+		
+	}
+
+	public function gallery()
+	{
+		$this->load->view('vistasIniciales/headPages');
+		$this->load->view('vistasIniciales/gallery');
+		$this->load->view('vistasIniciales/footer');
+		
+	}
+
+	public function news()
+	{
+		$this->load->view('vistasIniciales/headPages');
+		$this->load->view('vistasIniciales/news');
+		$this->load->view('vistasIniciales/footer');
+		
+	}
+
+	public function sports()
+	{
+		$this->load->view('vistasIniciales/headPages');
+		$this->load->view('vistasIniciales/sports');
+		$this->load->view('vistasIniciales/footer');
+		
+	}
+
+	public function testimonials()
+	{
+		$this->load->view('vistasIniciales/headPages');
+		$this->load->view('vistasIniciales/testimonials');
+		$this->load->view('vistasIniciales/footer');
+		
+	}
+
 	public function agregar()
 	{
-		$this->load->view('inc/vistaslte/head');
-		$this->load->view('inc/vistaslte/menu');
-		$this->load->view('formulario');
-		$this->load->view('inc/vistaslte/footer');
+		$this->load->view('vistasIniciales/head');
+		$this->load->view('forms/formulario');
+		$this->load->view('vistasIniciales/footer');
 		
 	}
 	public function agregarbd()
@@ -60,10 +106,9 @@ class Estudiante extends CI_Controller
 		$idestudiante = $_POST['idestudiante'];
 		$data['infoestudiante'] = $this->estudiante_model->recuperarestudiante($idestudiante);
 
-		$this->load->view('inc/vistaslte/head');
-		$this->load->view('inc/vistaslte/menu');
-		$this->load->view('formmodificar', $data);
-		$this->load->view('inc/vistaslte/footer');
+		$this->load->view('vistasIniciales/head');
+		$this->load->view('forms/formmodificar', $data);
+		$this->load->view('vistasIniciales/footer');
 		
 
 	}
@@ -104,81 +149,10 @@ class Estudiante extends CI_Controller
 	}
 
 
+	
 
 
 
-
-
-	public function principal()
-	{
-		$this->load->view('inc/head');
-		$this->load->view('inc/principal');
-		$this->load->view('inc/footer');
-		
-	}
-
-	public function about()
-	{
-		$this->load->view('inc/vistasPages/headPages');
-		$this->load->view('inc/vistasPages/about');
-		$this->load->view('inc/footer');
-		
-	}
-
-	public function contact()
-	{
-		$this->load->view('inc/vistasPages/headPages');
-		$this->load->view('inc/vistasPages/contact');
-		$this->load->view('inc/footer');
-		
-	}
-
-	public function donations()
-	{
-		$this->load->view('inc/vistasPages/headPages');
-		$this->load->view('inc/vistasPages/donations');
-		$this->load->view('inc/footer');
-		
-	}
-
-	public function education()
-	{
-		$this->load->view('inc/vistasPages/headPages');
-		$this->load->view('inc/vistasPages/education');
-		$this->load->view('inc/footer');
-		
-	}
-
-	public function gallery()
-	{
-		$this->load->view('inc/vistasPages/headPages');
-		$this->load->view('inc/vistasPages/gallery');
-		$this->load->view('inc/footer');
-		
-	}
-
-	public function news()
-	{
-		$this->load->view('inc/vistasPages/headPages');
-		$this->load->view('inc/vistasPages/news');
-		$this->load->view('inc/footer');
-		
-	}
-
-	public function sports()
-	{
-		$this->load->view('inc/vistasPages/headPages');
-		$this->load->view('inc/vistasPages/sports');
-		$this->load->view('inc/footer');
-		
-	}
-
-	public function testimonials()
-	{
-		$this->load->view('inc/vistasPages/headPages');
-		$this->load->view('inc/vistasPages/testimonials');
-		$this->load->view('inc/footer');
-		
-	}
+	
 }
 

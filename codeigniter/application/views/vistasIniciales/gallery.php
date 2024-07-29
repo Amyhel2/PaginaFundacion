@@ -23,49 +23,49 @@
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="gallery-item position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/t1.jpg" alt="">
+                    <img class="img-fluid w-100" src="<?php echo base_url() ?>img/t1.jpg" alt="">
                     <div class="gallery-overlay">
-                        <a class="btn btn-outline-light" href="img/t1.jpg" data-lightbox="gallery"><i class="fa fa-search"></i></a>
+                        <a class="btn btn-outline-light" href="<?php echo base_url() ?>img/t1.jpg" data-lightbox="gallery"><i class="fa fa-search"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="gallery-item position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/pageHeader.jpeg" alt="">
+                    <img class="img-fluid w-100" src="<?php echo base_url() ?>img/pageHeader.jpeg" alt="">
                     <div class="gallery-overlay">
-                        <a class="btn btn-outline-light" href="img/pageHeader.jpeg" data-lightbox="gallery"><i class="fa fa-search"></i></a>
+                        <a class="btn btn-outline-light" href="<?php echo base_url() ?>img/pageHeader.jpeg" data-lightbox="gallery"><i class="fa fa-search"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="gallery-item position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/t2.jpg" alt="">
+                    <img class="img-fluid w-100" src="<?php echo base_url() ?>img/t2.jpg" alt="">
                     <div class="gallery-overlay">
-                        <a class="btn btn-outline-light" href="img/t2.jpg" data-lightbox="gallery"><i class="fa fa-search"></i></a>
+                        <a class="btn btn-outline-light" href="<?php echo base_url() ?>img/t2.jpg" data-lightbox="gallery"><i class="fa fa-search"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="gallery-item position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="">
+                    <img class="img-fluid w-100" src="<?php echo base_url() ?>img/gallery-4.jpg" alt="">
                     <div class="gallery-overlay">
-                        <a class="btn btn-outline-light" href="img/gallery-4.jpg" data-lightbox="gallery"><i class="fa fa-search"></i></a>
+                        <a class="btn btn-outline-light" href="<?php echo base_url() ?>img/gallery-4.jpg" data-lightbox="gallery"><i class="fa fa-search"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="gallery-item position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/gallery-5.jpg" alt="">
+                    <img class="img-fluid w-100" src="<?php echo base_url() ?>img/gallery-5.jpg" alt="">
                     <div class="gallery-overlay">
-                        <a class="btn btn-outline-light" href="img/gallery-5.jpg" data-lightbox="gallery"><i class="fa fa-search"></i></a>
+                        <a class="btn btn-outline-light" href="<?php echo base_url() ?>img/gallery-5.jpg" data-lightbox="gallery"><i class="fa fa-search"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="gallery-item position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/gallery-6.jpg" alt="">
+                    <img class="img-fluid w-100" src="<?php echo base_url() ?>img/gallery-6.jpg" alt="">
                     <div class="gallery-overlay">
-                        <a class="btn btn-outline-light" href="img/gallery-6.jpg" data-lightbox="gallery"><i class="fa fa-search"></i></a>
+                        <a class="btn btn-outline-light" href="<?php echo base_url() ?>img/gallery-6.jpg" data-lightbox="gallery"><i class="fa fa-search"></i></a>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,6 @@
 
+ <!-- Customized Bootstrap Stylesheet -->
+<link href="<?php echo base_url() ?>css/style.css" rel="stylesheet"> 
  <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -16,17 +18,15 @@
           </div>
         </div>
  </div><!-- /.container-fluid -->
-
+<h1>Agregar libro</h1>
 <br>
-<h1>Ingreso de usuarios</h1>
-<br>
-
 <?php 
-	echo form_open_multipart("usuarios/validarusuario");
+	echo form_open_multipart("documentacion/agregarbd");
 ?>
-	<input type="text" class="form-control" name="login" placeholder="Escribe login" required>
-	<input type="password" class="form-control" name="password" placeholder="Escribe password" required>
-	<button type="submit"  class="btn btn-success">Ingresar</button>
+	<input type="text" class="form-control" name="titulo" placeholder="Escribe el titulo del libro" required>
+	
+	
+	<button type="submit"  class="btn btn-success">Agregar</button>
 <?php
 	echo form_close();
 ?>

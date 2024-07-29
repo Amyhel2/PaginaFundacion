@@ -26,7 +26,7 @@
                         <div class="blog-content">
                             <h4 class="text-primary">Recursos Educativos</h4>
                             <p>Material de apoyo.</p>
-                            <a href="education-detail.html" class="btn btn-primary mt-3">Leer Más</a>
+                            <a href="<?php echo base_url() ?>index.php/documentacion/index" class="btn btn-primary mt-3">Leer Más</a>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                         <div class="blog-content">
                             <h4 class="text-primary">Programación</h4>
                             <p>Capacitación en habilidades tecnológicas y de programación.</p>
-                            <a href="education-detail.html" class="btn btn-primary mt-3">Leer Más</a>
+                            <a href="<?php echo base_url() ?>documentacion/docProgra" class="btn btn-primary mt-3">Leer Más</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                         <div class="blog-content">
                             <h4 class="text-primary">Concursos</h4>
                             <p>Desarrollo de habilidades sociales.</p>
-                            <a href="education-detail.html" class="btn btn-primary mt-3">Leer Más</a>
+                            <a href="<?php echo base_url() ?>concursos.php" class="btn btn-primary mt-3">Leer Más</a>
                         </div>
                     </div>
                 </div>

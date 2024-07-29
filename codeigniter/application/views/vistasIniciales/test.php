@@ -1,3 +1,5 @@
+ <!-- Customized Bootstrap Stylesheet -->
+ <link href="<?php echo base_url() ?>css/style.css" rel="stylesheet">
  <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -5,17 +7,17 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-12">
-		  <h1>Lista de estudiantes</h1>
+		  <h1>Lista de documentos</h1>
 		  <?php
 echo date('Y/m/d H:i:s');
 ?>
 <br>
-<a href="<?php echo base_url() ?>index.php/estudiante/agregar">
-	<button type="button" class="btn btn-primary">Agregar estudiante</button>
+<a href="<?php echo base_url() ?>index.php/documentacion/agregar">
+	<button type="button" class="btn btn-primary">Agregar libro</button>
 </a>
 <br>
 <hr>
-<a href="<?php echo base_url() ?>index.php/estudiante/deshabilitados">
+<a href="<?php echo base_url() ?>index.php/documentacion/deshabilitados">
 	<button type="button" class="btn btn-primary">Ver deshabilitados</button>
 </a>
 <br>
@@ -26,11 +28,8 @@ echo date('Y/m/d H:i:s');
                 <thead>
                     <tr>
                     <th>No.</th>
-		            <th>Nombre</th>
-		            <th>Primer Apellido</th>
-		            <th>Segundo Apellido</th>
-		            <th>Nota</th>
-					<th>Creado</th>
+		            <th>titulo</th>
+		            
 		            <th>Modificar</th>
 		            <th>Eliminar</th>
 		            <th>Deshabilitar</th>
@@ -41,22 +40,17 @@ echo date('Y/m/d H:i:s');
 	<tbody>
 		<?php
 		$con = 1;
-		foreach ($alumnos->result() as $row) {
+		foreach ($libros->result() as $row) {
 			?>
 			<tr>
 				<td><?php echo $con; ?></td>
-				<td><?php echo $row->nombre; ?></td>
-				<td><?php echo $row->primerApellido; ?></td>
-				<td><?php echo $row->segundoApellido; ?></td>
-				<td><?php echo $row->nota; ?>
-				<?php echo estado($row->nota);?>
-				</td>
-				<td><?php echo formatearFecha($row->creado); ?></td>
+				<td><?php echo $row->titulo; ?></td>
+				
 				<td>
 					<?php
-					echo form_open_multipart("estudiante/modificar");
+					echo form_open_multipart("documentacion/modificar");
 					?>
-					<input type="hidden" name="idestudiante" value="<?php echo $row->IdEstudiante; ?>">
+					<input type="hidden" name="idlibro" value="<?php echo $row->idLibro; ?>">
 					<button type="submit" class="btn btn-success">Modificar</button>
 					<?php
 					echo form_close();
@@ -64,9 +58,9 @@ echo date('Y/m/d H:i:s');
 				</td>
 				<td>
 					<?php
-					echo form_open_multipart("estudiante/eliminarbd");
+					echo form_open_multipart("documentacion/eliminarbd");
 					?>
-					<input type="hidden" name="idestudiante" value="<?php echo $row->IdEstudiante; ?>">
+					<input type="hidden" name="idlibro" value="<?php echo $row->idLibro; ?>">
 					<button type="submit" class="btn btn-danger">Eliminar</button>
 					<?php
 					echo form_close();
@@ -74,9 +68,9 @@ echo date('Y/m/d H:i:s');
 				</td>
 				<td>
 					<?php
-					echo form_open_multipart("estudiante/deshabilitarbd");
+					echo form_open_multipart("documentacion/deshabilitarbd");
 					?>
-					<input type="hidden" name="idestudiante" value="<?php echo $row->IdEstudiante; ?>">
+					<input type="hidden" name="idlibro" value="<?php echo $row->idLibro; ?>">
 					<button type="submit" class="btn btn-primary">Deshabilitar</button>
 					<?php
 					echo form_close();

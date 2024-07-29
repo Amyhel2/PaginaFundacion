@@ -1,6 +1,5 @@
-
-<!-- Footer Start -->
-<div class="container-fluid footer bg-secondary text-white mt-5 pt-5 px-0 position-relative">
+ <!-- Footer Start -->
+ <div class="container-fluid footer bg-secondary text-white mt-5 pt-5 px-0 position-relative">
         <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Contacto</h4>

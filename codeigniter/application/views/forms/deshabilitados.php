@@ -1,3 +1,5 @@
+ <!-- Customized Bootstrap Stylesheet -->
+ <link href="<?php echo base_url() ?>css/style.css" rel="stylesheet">
  <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -9,7 +11,7 @@
 <br>
 
 <hr>
-<a href="<?php echo base_url() ?>index.php/estudiante/curso">
+<a href="<?php echo base_url() ?>index.php/documentacion/inicio">
 	<button type="button" class="btn btn-secondary">Ver habilitados</button>
 	
 </a>
@@ -17,26 +19,24 @@
 <table id="example1" class="table table-bordered table-striped">
 	<thead>
 		<th>No.</th>
-		<th>Nombre</th>
-		<th>Primer Apellido</th>
-		<th>Segundo Apellido</th>
+		<th>Titulo</th>
+		
 		<th>Habilitar</th>
 	</thead>
 	<tbody>
 		<?php
 		$con = 1;
-		foreach ($alumnos->result() as $row) {
+		foreach ($libros->result() as $row) {
 			?>
 			<tr>
 				<td><?php echo $con; ?></td>
-				<td><?php echo $row->nombre; ?></td>
-				<td><?php echo $row->primerApellido; ?></td>
-				<td><?php echo $row->segundoApellido; ?></td>
+				<td><?php echo $row->titulo; ?></td>
+				
 				<td>
 					<?php
-					echo form_open_multipart("estudiante/habilitarbd");
+					echo form_open_multipart("documentacion/habilitarbd");
 					?>
-					<input type="hidden" name="idestudiante" value="<?php echo $row->IdEstudiante; ?>">
+					<input type="hidden" name="idlibro" value="<?php echo $row->idLibro; ?>">
 					<button type="submit" class="btn btn-primary">Habilitar</button>
 					<?php
 					echo form_close();
