@@ -4,6 +4,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Usuario extends CI_Controller
 {
 
+    public function indexP()
+    {
+        $this->load->view('vistaAdmin');
+        $this->load->view('indexP');
+        $this->load->view('adminpie');
+    }
+
+
 	public function usuarios()
 {
     if ($this->session->userdata('login'))
@@ -24,12 +32,6 @@ class Usuario extends CI_Controller
         redirect('usuario/index', 'refresh');
     }
 }
-public function start()
-    {
-        $this->load->view('vistasIniciales/headPages');
-        $this->load->view('vistasIniciales/principal');
-        $this->load->view('vistasIniciales/footer');
-    }
 
 
     public function principal()
