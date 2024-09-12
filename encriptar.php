@@ -7,8 +7,8 @@
 </head>
 <body>
 <?php 
-echo sha1("aciones");
-echo hash("sha256", "bolivia123");
+echo sha1('aciones');
+
  ?>
 
 </body>
