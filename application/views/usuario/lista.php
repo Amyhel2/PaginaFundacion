@@ -85,7 +85,7 @@
                                                     <input type="hidden" name="idusuario" value="<?php echo $row->idUsuario; ?>">
                                                     <button type="submit" class="btn btn-primary">
                                                         <i class="fas fa-user-slash"></i>
-                                                    </button>
+                                                     </button>
                                                     <?php echo form_close(); ?>
                                                 </div>
                                             </td>

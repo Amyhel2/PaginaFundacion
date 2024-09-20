@@ -53045,9 +53045,12 @@ a.text-muted:hover {
 
 /* Color del texto en los enlaces del menú al hacer hover */
 .main-sidebar .nav-link:hover {
-  background-color: #002d72; /* Color de fondo al hacer hover en los enlaces (azul marino más oscuro) */
-  color: #ffeb3b; /* Color del texto al hacer hover (amarillo) */
+  background-color:#ffeb3b ; /* Color de fondo al hacer hover en los enlaces (azul marino más oscuro) */
+  color: #87CEEB; /* Color del texto al hacer hover (amarillo) */
 }
+
+/* Estado activo del enlace */
+
 
 /* Color del texto e íconos en los submenús (nav-treeview) */
 .main-sidebar .nav-treeview .nav-link {
@@ -53112,4 +53115,18 @@ a.text-muted:hover {
 /* Color de los íconos de usuario */
 .main-sidebar .user-panel .image img {
   border: 2px solid #ffffff; /* Borde blanco alrededor de la imagen de perfil */
+}
+.brand-text {
+  color: whitesmoke !important;
+}
+a {
+  color: whitesmoke !important; /* Color normal del enlace */
+}
+
+a:hover {
+  color: var(--blue) !important; /* Color al pasar el mouse */
+}
+.main-sidebar .nav-link:active {
+  background-color: #fbc02d; /* Color de fondo cuando el enlace está activo */
+  color: #fff; /* Color del texto cuando está activo */
 }

@@ -6,14 +6,23 @@ class Usuario extends CI_Controller
 
     public function indexP()
     {
-        $this->load->view('vistaAdmin');
-        $this->load->view('indexP');
+
+       if ($this->session->userdata('login')) {
+        $data['nombreUsuario'] = $this->session->userdata('nombre'); // Obtén el nombre del usuario
+        
+        
+        $this->load->view('vistaAdmin',$data);
+        $this->load->view('indexP' ); // Pasa los datos a la vista
         $this->load->view('adminpie');
+    } else {
+        redirect('usuario/login'); // Redirige si no está logueado
+    }
+        
     }
 
 
 	public function usuarios()
-{
+    {
     if ($this->session->userdata('login'))
     {
         // Obtener la lista de usuarios desde el modelo
@@ -31,7 +40,7 @@ class Usuario extends CI_Controller
     {
         redirect('usuario/index', 'refresh');
     }
-}
+    }
 
 
     public function principal()
@@ -40,6 +49,13 @@ class Usuario extends CI_Controller
         $this->load->view('vistaAdmin');
 		$this->load->view('usuario/lista');
         $this->load->view('adminpie');
+    }
+
+    public function start()
+    {
+        $this->load->view('vistasIniciales/headPages');
+        $this->load->view('vistasIniciales/principal');
+        $this->load->view('vistasIniciales/footer');
     }
 
     public function about()
@@ -287,11 +303,9 @@ public function registrar()
     }
 }
 
-
     public function index()
     {
         $this->load->view('usuario/forms/loginform');
-        $this->load->view('vistasIniciales/footer');
     }
 
     public function administrador()
@@ -346,6 +360,53 @@ public function registrar()
     }
 
 
+
+
+    // Método para mostrar la vista de configuración del usuario
+    public function configuracion() {
+        // Obtener información del usuario desde la sesión
+        $userId = $this->session->userdata('idUsuario');  // Asegúrate de que 'idUsuario' esté en la sesión
+        $data['usuario'] = $this->usuario_model->obtener_usuario_por_id($userId);
+
+        // Cargar la vista de configuración con los datos del usuario
+        $this->load->view('configUsuario', $data);
+    }
+
+    // Método para actualizar la contraseña del usuario
+    public function cambiar_password() {
+        $this->form_validation->set_rules('password_actual', 'Contraseña Actual', 'required');
+        $this->form_validation->set_rules('password_nueva', 'Nueva Contraseña', 'required|min_length[6]');
+        $this->form_validation->set_rules('confirmar_password', 'Confirmar Contraseña', 'required|matches[password_nueva]');
+
+        if ($this->form_validation->run() == FALSE) {
+            // Si la validación falla, recargar la vista con errores
+            $this->configuracion();
+        } else {
+            // Obtener el ID del usuario de la sesión
+            $userId = $this->session->userdata('idUsuario');
+            $passwordActual = $this->input->post('password_actual');
+            $passwordNueva = $this->input->post('password_nueva');
+
+            // Verificar la contraseña actual
+            if ($this->usuario_model->verificar_password($userId, $passwordActual)) {
+                // Actualizar la nueva contraseña
+                $this->usuario_model->actualizar_password($userId, password_hash($passwordNueva, PASSWORD_DEFAULT));
+                $this->session->set_flashdata('mensaje', 'Contraseña actualizada correctamente.');
+            } else {
+                $this->session->set_flashdata('error', 'La contraseña actual no es correcta.');
+            }
+            redirect('usuario/configuracion');
+        }
+    }
+
+    // Método para cerrar sesión
+    public function cerrar_sesion() {
+        $this->session->sess_destroy();  // Destruir toda la sesión
+        redirect('login');
+    }
+
+    
+    
 
 
 

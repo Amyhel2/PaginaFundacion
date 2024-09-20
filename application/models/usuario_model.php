@@ -75,4 +75,40 @@ class Usuario_model extends CI_Model
         $this->db->where('habilitado', 1); // Usa enteros en lugar de strings
         return $this->db->get('usuario')->result();
     }
+
+
+
+    // Obtener la información del usuario por ID
+    public function obtener_usuario_por_id($idUsuario) {
+        $this->db->where('idUsuario', $idUsuario);
+        $query = $this->db->get('usuario');
+        return $query->row();
+    }
+
+    // Verificar la contraseña del usuario
+    public function verificar_password($idUsuario, $password) {
+        $this->db->where('idUsuario', $idUsuario);
+        $usuario = $this->db->get('usuario')->row();
+
+        // Verificar si la contraseña coincide
+        if (password_verify($password, $usuario->contraseña)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // Actualizar la contraseña del usuario
+    public function actualizar_password($idUsuario, $password_hash) {
+        $this->db->where('idUsuario', $idUsuario);
+        $this->db->update('usuario', ['contraseña' => $password_hash]);
+    }
+
+
+
+
+
+
+
+   
 }

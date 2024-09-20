@@ -47,7 +47,7 @@
                         <div class="form-group mt-3">
                             <label for="rol">Rol</label>
                             <select class="form-control form-control-lg rounded-pill" name="rol" required>
-                                <option value="admin">Administrador</option>
+                                <!--<option value="admin">Administrador</option>-->
                                 <option value="usuario">Usuario</option>
                             </select>
                         </div>

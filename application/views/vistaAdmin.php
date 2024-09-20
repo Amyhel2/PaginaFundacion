@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | DataTables</title>
+  <title>SISTEMA CENTRAL</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -76,7 +76,7 @@
   <!-- Brand Logo -->
   <a href="<?php echo base_url() ?>index.php/usuario/indexP" class="brand-link">
     <img src="<?php echo base_url() ?>img/logo fundacion.jpg" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-    <span class="brand-text font-weight-light">Proyecto 506</span>
+    <span class="brand-text font-weight-light">PROYECTO 705</span>
   </a>
 
   <!-- Sidebar -->
@@ -85,8 +85,8 @@
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         
         <div class="info">
-            <a href="#" class="d-block">
-                <?php echo isset($nombre_usuario) ? $nombre_usuario : 'Invitado'; ?>
+            <a href="<?php echo base_url() ?>index.php/usuario/configuracion" class="d-block">
+                <?php echo isset($nombreUsuario) ? $nombreUsuario : 'Invitado'; ?>
             </a>
         </div>
     </div>
